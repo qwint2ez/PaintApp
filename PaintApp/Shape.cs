@@ -25,5 +25,20 @@ namespace ConsolePaintApp
 
         public abstract void Draw(int canvasWidth, int canvasHeight);
         public abstract Shape Clone();
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Shape other = (Shape)obj;
+            return X == other.X && Y == other.Y && Size == other.Size &&
+                   FillChar == other.FillChar && BackgroundChar == other.BackgroundChar;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(X, Y, Size, FillChar, BackgroundChar);
+        }
     }
 }

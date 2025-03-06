@@ -6,16 +6,12 @@ namespace ConsolePaintApp
 {
     public class Canvas
     {
+        public static bool IsTesting { get; set; } = false;
         private List<Shape> shapes = new List<Shape>();
         private Stack<List<Shape>> undoStack = new Stack<List<Shape>>();
         private Stack<List<Shape>> redoStack = new Stack<List<Shape>>();
         public const int Width = 40;
         public const int Height = 20;
-
-        public Canvas()
-        {
-
-        }
 
         public void AddShape(Shape shape)
         {
@@ -124,22 +120,25 @@ namespace ConsolePaintApp
 
         public void Redraw()
         {
-            Console.Clear();
-            for (int i = 0; i < Height; i++)
+            if (!IsTesting)
             {
-                for (int j = 0; j < Width; j++)
+                Console.Clear();
+                for (int i = 0; i < Height; i++)
                 {
-                    Console.SetCursorPosition(j, i);
-                    if (i == 0 || i == Height - 1) Console.Write("-");
-                    else if (j == 0 || j == Width - 1) Console.Write("|");
-                    else Console.Write(" ");
+                    for (int j = 0; j < Width; j++)
+                    {
+                        Console.SetCursorPosition(j, i);
+                        if (i == 0 || i == Height - 1) Console.Write("-");
+                        else if (j == 0 || j == Width - 1) Console.Write("|");
+                        else Console.Write(" ");
+                    }
                 }
+                foreach (var shape in shapes)
+                {
+                    shape.Draw(Width, Height);
+                }
+                Console.SetCursorPosition(0, Height);
             }
-            foreach (var shape in shapes)
-            {
-                shape.Draw(Width, Height);
-            }
-            Console.SetCursorPosition(0, Height);
         }
 
         public void DisplayShapes()
