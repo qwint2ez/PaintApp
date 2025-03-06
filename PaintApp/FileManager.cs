@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ConsolePaintApp
 {
-    class FileManager
+    public class FileManager
     {
         public void SaveCanvas(Canvas canvas, string filename)
         {
@@ -12,7 +12,7 @@ namespace ConsolePaintApp
             {
                 using (StreamWriter writer = new StreamWriter(filename))
                 {
-                    writer.WriteLine($"{canvas.Width},{canvas.Height}");
+                    writer.WriteLine($"{Canvas.Width},{Canvas.Height}");
                     foreach (var shape in canvas.GetShapes())
                     {
                         string type = shape.GetType().Name;
@@ -42,7 +42,7 @@ namespace ConsolePaintApp
                     string[] dimensions = reader.ReadLine().Split(',');
                     int width = int.Parse(dimensions[0]);
                     int height = int.Parse(dimensions[1]);
-                    if (width != canvas.Width || height != canvas.Height)
+                    if (width != Canvas.Width || height != Canvas.Height)
                     {
                         Console.WriteLine("Error: Canvas dimensions do not match.");
                         return;

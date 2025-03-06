@@ -2,7 +2,7 @@
 
 namespace ConsolePaintApp
 {
-    abstract class Shape
+    public abstract class Shape
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -17,11 +17,13 @@ namespace ConsolePaintApp
             Size = size;
         }
 
-        public abstract void Draw(int canvasWidth, int canvasHeight);
         public void Move(int newX, int newY)
         {
             X = newX;
             Y = newY;
         }
+
+        public abstract void Draw(int canvasWidth, int canvasHeight);
+        public abstract Shape Clone();
     }
 }

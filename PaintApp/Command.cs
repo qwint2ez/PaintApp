@@ -2,7 +2,7 @@
 
 namespace ConsolePaintApp
 {
-    class Command
+    public class Command
     {
         private Canvas canvas;
 
@@ -13,7 +13,14 @@ namespace ConsolePaintApp
 
         public void Execute(string command)
         {
-            switch (command?.ToLower().Trim())
+            if (string.IsNullOrEmpty(command))
+            {
+                Console.WriteLine("Error: Command cannot be empty.");
+                return;
+            }
+
+            string cmd = command.ToLower().Trim();
+            switch (cmd)
             {
                 case "add":
                     AddShape();
@@ -53,110 +60,120 @@ namespace ConsolePaintApp
 
         private void AddShape()
         {
-            try
+            Console.Write("Enter shape type (circle/square): ");
+            string type = Console.ReadLine()?.ToLower();
+            if (type != "circle" && type != "square")
             {
-                Console.Write("Enter shape type (circle/square): ");
-                string type = Console.ReadLine()?.ToLower();
-                Console.Write("Enter X: ");
-                int x = int.Parse(Console.ReadLine());
-                Console.Write("Enter Y: ");
-                int y = int.Parse(Console.ReadLine());
-                Console.Write("Enter size: ");
-                int size = int.Parse(Console.ReadLine());
+                Console.WriteLine("Error: Invalid shape type.");
+                return;
+            }
 
-                Shape shape = type switch
-                {
-                    "circle" => new Circle(x, y, size),
-                    "square" => new Square(x, y, size),
-                    _ => throw new Exception("Invalid shape type.")
-                };
-                canvas.AddShape(shape);
-            }
-            catch (Exception ex)
+            Console.Write("Enter X: ");
+            if (!int.TryParse(Console.ReadLine(), out int x) || x < 0)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("Error: X must be a non-negative integer.");
+                return;
             }
+
+            Console.Write("Enter Y: ");
+            if (!int.TryParse(Console.ReadLine(), out int y) || y < 0)
+            {
+                Console.WriteLine("Error: Y must be a non-negative integer.");
+                return;
+            }
+
+            Console.Write("Enter size: ");
+            if (!int.TryParse(Console.ReadLine(), out int size) || size <= 0)
+            {
+                Console.WriteLine("Error: Size must be a positive integer.");
+                return;
+            }
+
+            Shape shape = type == "circle" ? new Circle(x, y, size) : new Square(x, y, size);
+            canvas.AddShape(shape);
         }
 
         private void EraseShape()
         {
-            try
+            Console.Write("Enter index to erase: ");
+            if (!int.TryParse(Console.ReadLine(), out int index) || index < 0)
             {
-                canvas.DisplayShapes();
-                Console.Write("Enter index to erase: ");
-                int index = int.Parse(Console.ReadLine());
-                canvas.EraseShape(index);
+                Console.WriteLine("Error: Index must be a non-negative integer.");
+                return;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
+            canvas.EraseShape(index);
         }
 
         private void MoveShape()
         {
-            try
+            Console.Write("Enter index to move: ");
+            if (!int.TryParse(Console.ReadLine(), out int index) || index < 0)
             {
-                canvas.DisplayShapes();
-                Console.Write("Enter index to move: ");
-                int index = int.Parse(Console.ReadLine());
-                Console.Write("Enter new X: ");
-                int newX = int.Parse(Console.ReadLine());
-                Console.Write("Enter new Y: ");
-                int newY = int.Parse(Console.ReadLine());
-                canvas.MoveShape(index, newX, newY);
+                Console.WriteLine("Error: Index must be a non-negative integer.");
+                return;
             }
-            catch (Exception ex)
+
+            Console.Write("Enter new X: ");
+            if (!int.TryParse(Console.ReadLine(), out int newX) || newX < 0)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("Error: New X must be a non-negative integer.");
+                return;
             }
+
+            Console.Write("Enter new Y: ");
+            if (!int.TryParse(Console.ReadLine(), out int newY) || newY < 0)
+            {
+                Console.WriteLine("Error: New Y must be a non-negative integer.");
+                return;
+            }
+
+            canvas.MoveShape(index, newX, newY);
         }
 
         private void SetBackground()
         {
-            try
+            Console.Write("Enter index to set background: ");
+            if (!int.TryParse(Console.ReadLine(), out int index) || index < 0)
             {
-                canvas.DisplayShapes();
-                Console.Write("Enter index to set background: ");
-                int index = int.Parse(Console.ReadLine());
-                Console.Write("Enter background character: ");
-                char bgChar = Console.ReadLine()[0];
-                canvas.SetBackground(index, bgChar);
+                Console.WriteLine("Error: Index must be a non-negative integer.");
+                return;
             }
-            catch (Exception ex)
+
+            Console.Write("Enter background character: ");
+            string input = Console.ReadLine();
+            if (string.IsNullOrEmpty(input))
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("Error: Background character cannot be empty.");
+                return;
             }
+            char bgChar = input[0];
+            canvas.SetBackground(index, bgChar);
         }
 
         private void SaveCanvas()
         {
-            try
+            Console.Write("Enter filename to save: ");
+            string filename = Console.ReadLine();
+            if (string.IsNullOrEmpty(filename))
             {
-                Console.Write("Enter filename to save: ");
-                string filename = Console.ReadLine();
-                FileManager fileManager = new FileManager();
-                fileManager.SaveCanvas(canvas, filename);
+                Console.WriteLine("Error: Filename cannot be empty.");
+                return;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
+            FileManager fileManager = new FileManager();
+            fileManager.SaveCanvas(canvas, filename);
         }
 
         private void LoadCanvas()
         {
-            try
+            Console.Write("Enter filename to load: ");
+            string filename = Console.ReadLine();
+            if (string.IsNullOrEmpty(filename))
             {
-                Console.Write("Enter filename to load: ");
-                string filename = Console.ReadLine();
-                FileManager fileManager = new FileManager();
-                fileManager.LoadCanvas(canvas, filename);
+                Console.WriteLine("Error: Filename cannot be empty.");
+                return;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
+            FileManager fileManager = new FileManager();
+            fileManager.LoadCanvas(canvas, filename);
         }
     }
-}   
+}

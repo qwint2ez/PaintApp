@@ -2,27 +2,37 @@
 
 namespace ConsolePaintApp
 {
-    class Circle : Shape
+    public class Circle : Shape
     {
+        private const double WidthCoefficient = 1;
+
         public Circle(int x, int y, int size) : base(x, y, size) { }
 
         public override void Draw(int canvasWidth, int canvasHeight)
         {
-            for (int i = -Size; i <= Size; i++)
+            int radius = Size;
+            for (int i = -radius; i <= radius; i++)
             {
-                for (int j = -Size; j <= Size; j++)
+                for (int j = -radius; j <= radius; j++)
                 {
-                    double distance = Math.Sqrt(i * i + j * j);
-                    int drawX = X + j;
-                    int drawY = Y + i;
-                    if (drawX >= 0 && drawX < canvasWidth && drawY >= 0 && drawY < canvasHeight)
+                    double adjustedJ = j / WidthCoefficient;
+                    double distance = Math.Sqrt(i * i + adjustedJ * adjustedJ);
+
+                    if (Math.Abs(distance - radius) < 0.5)
                     {
-                        if (Math.Abs(distance - Size) < 0.5)
+                        int drawX = X + j;
+                        int drawY = Y + i;
+                        if (drawX >= 0 && drawX < canvasWidth && drawY >= 0 && drawY < canvasHeight)
                         {
                             Console.SetCursorPosition(drawX, drawY);
                             Console.Write(FillChar);
                         }
-                        else if (distance < Size)
+                    }
+                    else if (distance < radius)
+                    {
+                        int drawX = X + j;
+                        int drawY = Y + i;
+                        if (drawX >= 0 && drawX < canvasWidth && drawY >= 0 && drawY < canvasHeight)
                         {
                             Console.SetCursorPosition(drawX, drawY);
                             Console.Write(BackgroundChar);
@@ -30,6 +40,11 @@ namespace ConsolePaintApp
                     }
                 }
             }
+        }
+
+        public override Shape Clone()
+        {
+            return new Circle(X, Y, Size) { FillChar = FillChar, BackgroundChar = BackgroundChar };
         }
     }
 }

@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsolePaintApp
 {
-    class Canvas
+    public class Canvas
     {
         private List<Shape> shapes = new List<Shape>();
         private Stack<List<Shape>> undoStack = new Stack<List<Shape>>();
         private Stack<List<Shape>> redoStack = new Stack<List<Shape>>();
-        public int Width { get; }
-        public int Height { get; }
+        public const int Width = 40;
+        public const int Height = 20;
 
-        public Canvas(int width, int height)
+        public Canvas()
         {
-            Width = width;
-            Height = height;
-            Redraw();
+
         }
 
         public void AddShape(Shape shape)
@@ -50,12 +49,12 @@ namespace ConsolePaintApp
         {
             if (index >= 0 && index < shapes.Count)
             {
-                Shape temp = shapes[index];
-                temp.Move(newX, newY);
-                if (IsWithinBounds(temp))
+                Shape currentShape = shapes[index];
+                Shape tempShape = currentShape is Circle ? new Circle(newX, newY, currentShape.Size) : new Square(newX, newY, currentShape.Size);
+                if (IsWithinBounds(tempShape))
                 {
                     SaveStateForUndo();
-                    shapes[index] = temp;
+                    currentShape.Move(newX, newY);
                     Redraw();
                 }
                 else
@@ -87,7 +86,7 @@ namespace ConsolePaintApp
         {
             if (undoStack.Count > 0)
             {
-                redoStack.Push(new List<Shape>(shapes));
+                redoStack.Push(shapes.Select(s => s.Clone()).ToList());
                 shapes = undoStack.Pop();
                 Redraw();
             }
@@ -101,7 +100,7 @@ namespace ConsolePaintApp
         {
             if (redoStack.Count > 0)
             {
-                undoStack.Push(new List<Shape>(shapes));
+                undoStack.Push(shapes.Select(s => s.Clone()).ToList());
                 shapes = redoStack.Pop();
                 Redraw();
             }
@@ -113,7 +112,7 @@ namespace ConsolePaintApp
 
         private void SaveStateForUndo()
         {
-            undoStack.Push(new List<Shape>(shapes));
+            undoStack.Push(shapes.Select(s => s.Clone()).ToList());
             redoStack.Clear();
         }
 

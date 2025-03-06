@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\OOP\\PaintApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|d:\\oop\\paintapp\\paintapp\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|d:\\oop\\paintapp\\paintapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +23,12 @@
       "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\canvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\canvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|solutionrelative:paintapp\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5698E80-DE7C-44F9-8EDA-543FCE1BB527}|PaintApp\\PaintApp.csproj|D:\\OOP\\PaintApp\\paintapp\\paintapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -52,48 +52,48 @@
               "RelativeDocumentMoniker": "PaintApp\\Canvas.cs",
               "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Canvas.cs",
               "RelativeToolTip": "PaintApp\\Canvas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKIAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T12:42:28.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Command.cs",
               "DocumentMoniker": "D:\\OOP\\PaintApp\\PaintApp\\Command.cs",
               "RelativeDocumentMoniker": "PaintApp\\Command.cs",
               "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Command.cs",
               "RelativeToolTip": "PaintApp\\Command.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAwwKEAAAAEAAAA",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAuwLIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T12:42:56.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Circle.cs",
-              "DocumentMoniker": "D:\\OOP\\PaintApp\\PaintApp\\Circle.cs",
-              "RelativeDocumentMoniker": "PaintApp\\Circle.cs",
-              "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Circle.cs",
-              "RelativeToolTip": "PaintApp\\Circle.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T12:43:14.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FileManager.cs",
               "DocumentMoniker": "D:\\OOP\\PaintApp\\PaintApp\\FileManager.cs",
               "RelativeDocumentMoniker": "PaintApp\\FileManager.cs",
               "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\FileManager.cs",
               "RelativeToolTip": "PaintApp\\FileManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAAABAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwFEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T12:41:50.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\OOP\\PaintApp\\PaintApp\\Program.cs",
+              "RelativeDocumentMoniker": "PaintApp\\Program.cs",
+              "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Program.cs",
+              "RelativeToolTip": "PaintApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowBgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T12:19:31.664Z",
               "EditorCaption": ""
             },
             {
@@ -104,7 +104,7 @@
               "RelativeDocumentMoniker": "PaintApp\\Shape.cs",
               "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Shape.cs",
               "RelativeToolTip": "PaintApp\\Shape.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwBwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T12:43:30.652Z",
               "EditorCaption": ""
@@ -117,7 +117,7 @@
               "RelativeDocumentMoniker": "PaintApp\\Square.cs",
               "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Square.cs",
               "RelativeToolTip": "PaintApp\\Square.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBQAAAA0AAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwBcAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T08:00:04.595Z",
               "EditorCaption": ""
@@ -125,14 +125,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\OOP\\PaintApp\\PaintApp\\Program.cs",
-              "RelativeDocumentMoniker": "PaintApp\\Program.cs",
-              "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Program.cs",
-              "RelativeToolTip": "PaintApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAgAAAA",
+              "Title": "Circle.cs",
+              "DocumentMoniker": "D:\\OOP\\PaintApp\\PaintApp\\Circle.cs",
+              "RelativeDocumentMoniker": "PaintApp\\Circle.cs",
+              "ToolTip": "D:\\OOP\\PaintApp\\PaintApp\\Circle.cs",
+              "RelativeToolTip": "PaintApp\\Circle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T12:19:31.664Z",
+              "WhenOpened": "2025-02-25T12:43:14.43Z",
               "EditorCaption": ""
             },
             {
