@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaintApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6340d2db6db0c37c25ed1c97066412193e5766ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaintApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaintApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

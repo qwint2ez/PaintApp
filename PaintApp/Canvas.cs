@@ -114,7 +114,7 @@ namespace ConsolePaintApp
         private void SaveStateForUndo()
         {
             undoStack.Push(new List<Shape>(shapes));
-            redoStack.Clear(); // Очищаем стек redo при новом действии
+            redoStack.Clear();
         }
 
         private bool IsWithinBounds(Shape shape)
@@ -140,6 +140,7 @@ namespace ConsolePaintApp
             {
                 shape.Draw(Width, Height);
             }
+            Console.SetCursorPosition(0, Height);
         }
 
         public void DisplayShapes()
@@ -159,7 +160,7 @@ namespace ConsolePaintApp
 
         public List<Shape> GetShapes()
         {
-            return new List<Shape>(shapes); // Возвращаем копию для безопасности
+            return new List<Shape>(shapes);
         }
     }
 }

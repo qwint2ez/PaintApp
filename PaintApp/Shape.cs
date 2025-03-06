@@ -7,8 +7,8 @@ namespace ConsolePaintApp
         public int X { get; set; }
         public int Y { get; set; }
         public int Size { get; set; }
-        public char FillChar { get; set; } = '*'; // Outline character
-        public char BackgroundChar { get; set; } = ' '; // Background character
+        public char FillChar { get; set; } = '*';
+        public char BackgroundChar { get; set; } = ' ';
 
         public Shape(int x, int y, int size)
         {

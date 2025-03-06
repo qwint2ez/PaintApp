@@ -15,10 +15,11 @@ namespace ConsolePaintApp
             Canvas canvas = new Canvas(width, height);
             Command commandHandler = new Command(canvas);
 
-            commandHandler.DisplayHelp();
             while (true)
             {
-                Console.Write("\nEnter command: ");
+                canvas.Redraw();
+                Console.WriteLine("\nAvailable commands: add, erase, move, background, save, load, undo, redo, list, exit");
+                Console.Write("Enter command: ");
                 string command = Console.ReadLine();
                 commandHandler.Execute(command);
             }

@@ -18,9 +18,9 @@ namespace ConsolePaintApp
                     {
                         Console.SetCursorPosition(drawX, drawY);
                         if (i == 0 || i == Size - 1 || j == 0 || j == Size - 1)
-                            Console.Write(FillChar); // Outline
+                            Console.Write(FillChar);
                         else
-                            Console.Write(BackgroundChar); // Background
+                            Console.Write(BackgroundChar);
                     }
                 }
             }

@@ -22,3 +22,4 @@ D:\OOP\PaintApp\PaintApp\obj\Debug\net8.0\refint\PaintApp.dll
 D:\OOP\PaintApp\PaintApp\obj\Debug\net8.0\PaintApp.pdb
 D:\OOP\PaintApp\PaintApp\obj\Debug\net8.0\PaintApp.genruntimeconfig.cache
 D:\OOP\PaintApp\PaintApp\obj\Debug\net8.0\ref\PaintApp.dll
+D:\OOP\PaintApp\PaintApp\obj\Debug\net8.0\PaintApp.sourcelink.json

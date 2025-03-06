@@ -20,12 +20,12 @@ namespace ConsolePaintApp
                         if (Math.Abs(distance - Size) < 0.5)
                         {
                             Console.SetCursorPosition(drawX, drawY);
-                            Console.Write(FillChar); // Outline
+                            Console.Write(FillChar);
                         }
                         else if (distance < Size)
                         {
                             Console.SetCursorPosition(drawX, drawY);
-                            Console.Write(BackgroundChar); // Background
+                            Console.Write(BackgroundChar);
                         }
                     }
                 }
