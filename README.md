@@ -3,8 +3,8 @@
 ## Description of the Project
 This is a simple console-based Paint application implemented in C#. It allows users to draw shapes (circles and squares), erase them, move them, set backgrounds, save the canvas to a file, load from a file, and perform undo/redo actions. The application is designed to be user-friendly with interactive command input and robust error handling.
 
-## YOUR NAME AND GROUP NUMBER
-Completed by Alexander Svidinsy, group 353504
+## Completed by Alexander Svidinsy, group 353504
+
 ## UML Diagram
 ![UML Diagram](https://github.com/qwint2ez/PaintApp/blob/main/uml_diagram.pdf)  
 
