@@ -46,7 +46,13 @@ namespace ConsolePaintApp
             if (index >= 0 && index < shapes.Count)
             {
                 Shape currentShape = shapes[index];
-                Shape tempShape = currentShape is Circle ? new Circle(newX, newY, currentShape.Size) : new Square(newX, newY, currentShape.Size);
+                Shape tempShape = currentShape switch
+                {
+                    Circle => new Circle(newX, newY, currentShape.Size),
+                    Square => new Square(newX, newY, currentShape.Size),
+                    Triangle => new Triangle(newX, newY, currentShape.Size),
+                    _ => throw new Exception("Unknown shape type.")
+                };
                 if (IsWithinBounds(tempShape))
                 {
                     SaveStateForUndo();

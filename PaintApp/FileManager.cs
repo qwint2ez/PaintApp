@@ -64,6 +64,7 @@ namespace ConsolePaintApp
                         {
                             "Circle" => new Circle(x, y, size),
                             "Square" => new Square(x, y, size),
+                            "Triangle" => new Triangle(x, y, size),
                             _ => throw new Exception("Unknown shape type.")
                         };
                         shape.FillChar = fillChar;

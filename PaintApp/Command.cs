@@ -60,9 +60,9 @@ namespace ConsolePaintApp
 
         private void AddShape()
         {
-            Console.Write("Enter shape type (circle/square): ");
+            Console.Write("Enter shape type (circle/square/triangle): ");
             string type = Console.ReadLine()?.ToLower();
-            if (type != "circle" && type != "square")
+            if (type != "circle" && type != "square" && type != "triangle")
             {
                 Console.WriteLine("Error: Invalid shape type.");
                 return;
@@ -89,7 +89,13 @@ namespace ConsolePaintApp
                 return;
             }
 
-            Shape shape = type == "circle" ? new Circle(x, y, size) : new Square(x, y, size);
+            Shape shape = type switch
+            {
+                "circle" => new Circle(x, y, size),
+                "square" => new Square(x, y, size),
+                "triangle" => new Triangle(x, y, size),
+                _ => throw new Exception("Unknown shape type.")
+            };
             canvas.AddShape(shape);
         }
 
